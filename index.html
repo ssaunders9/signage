@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="3600">
+  <title>Tutoring Hours</title>
+  <link rel="stylesheet" href="styles.css?v=20260828-8">
+</head>
+<body>
+  <main class="signage" aria-live="polite">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow" id="collegeName">Voiland College of Engineering and Architecture</p>
+        <h1 id="pageTitle">Tutoring Hours</h1>
+      </div>
+      <div class="clock" aria-label="Current time">
+        <time id="currentTime">--:--</time>
+        <span id="currentDate">Loading…</span>
+      </div>
+    </header>
+
+    <section id="schedule" class="schedule" aria-label="Upcoming tutoring hours">
+      <div class="loading">Loading schedule…</div>
+    </section>
+
+    <footer>
+      <span id="staleWarning" class="warning" hidden>Schedule may be out of date</span>
+    </footer>
+  </main>
+  <script src="app.js?v=20260831-1"></script>
+</body>
+</html>
