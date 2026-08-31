@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T08:00:00-07:00",
+  "updated_at": "2026-08-31T08:00:00-07:00",
   "settings": {
     "college_name": "Voiland College of Engineering and Architecture",
     "page_title": "Tutoring Hours",
@@ -7,165 +7,41 @@
     "default_location": "Engineering Teaching and Learning Center"
   },
   "schedule": [
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "08:00",
-      "end": "10:00",
-      "tutor": "Alex Johnson",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "08:00",
-      "end": "10:00",
-      "tutor": "Jordan Lee",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 172", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "10:00",
-      "end": "11:00",
-      "tutor": "Alex Johnson",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "10:00",
-      "end": "11:00",
-      "tutor": "Jordan Lee",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 172", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "11:00",
-      "end": "13:00",
-      "tutor": "Taylor Morgan",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "MATH 172"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "11:00",
-      "end": "13:00",
-      "tutor": "Morgan Chen",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "13:00",
-      "end": "15:00",
-      "tutor": "Alex Johnson",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "13:00",
-      "end": "15:00",
-      "tutor": "Jordan Lee",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 172", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "15:00",
-      "end": "16:00",
-      "tutor": "Taylor Morgan",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "MATH 172"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "15:00",
-      "end": "16:00",
-      "tutor": "Morgan Chen",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "16:00",
-      "end": "18:00",
-      "tutor": "Alex Johnson",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "16:00",
-      "end": "18:00",
-      "tutor": "Jordan Lee",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 172", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "18:00",
-      "end": "19:00",
-      "tutor": "Taylor Morgan",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "MATH 172"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "day_label": "Weekdays",
-      "start": "18:00",
-      "end": "19:00",
-      "tutor": "Morgan Chen",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "day_label": "Mon–Sat",
-      "start": "19:00",
-      "end": "20:00",
-      "tutor": "Alex Johnson",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 171", "PHYS 201"],
-      "location": "ETLC — Table 1",
-      "active": true
-    },
-    {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "day_label": "Mon–Sat",
-      "start": "19:00",
-      "end": "20:00",
-      "tutor": "Jordan Lee",
-      "classes": ["CHE 101", "CHE 201", "CHE 321", "CHE 441", "CHE 485", "CHE 598", "ENGR 101", "ENGR 102", "MATH 172", "PHYS 201"],
-      "location": "ETLC — Table 2",
-      "active": true
-    }
+    {"days":["Monday"],"day_label":"Monday","start":"10:00","end":"11:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"10:00","end":"12:00","tutor":"Jordan Lee","classes":["CHE 321","CHE 441","CHE 485","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"12:00","end":"13:00","tutor":"Taylor Morgan","classes":["CHE 201","CHE 598","ENGR 101","ENGR 102","MATH 172"],"location":"ETLC — Table 1","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"14:00","end":"16:00","tutor":"Riley Patel","classes":["CHE 101","CHE 321","CHE 441","CHE 485","CHE 598","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"14:00","end":"15:00","tutor":"Morgan Chen","classes":["ENGR 101","ENGR 102","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"16:00","end":"17:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Monday"],"day_label":"Monday","start":"17:00","end":"18:00","tutor":"Jordan Lee","classes":["CHE 321","CHE 441","CHE 485","CHE 598","PHYS 201","ENGR 102","MATH 172"],"location":"ETLC — Table 2","active":true},
+
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"10:00","end":"12:00","tutor":"Taylor Morgan","classes":["CHE 201","CHE 321","CHE 485","ENGR 101","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"10:00","end":"11:00","tutor":"Morgan Chen","classes":["CHE 101","CHE 441","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"11:00","end":"13:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","CHE 321","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"13:00","end":"14:00","tutor":"Jordan Lee","classes":["CHE 441","CHE 485","CHE 598","PHYS 201","ENGR 102","MATH 172"],"location":"ETLC — Table 2","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"15:00","end":"17:00","tutor":"Riley Patel","classes":["CHE 201","CHE 321","CHE 441","CHE 485","CHE 598","ENGR 101","ENGR 102","MATH 171","MATH 172"],"location":"ETLC — Table 1","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"15:00","end":"16:00","tutor":"Taylor Morgan","classes":["CHE 101","CHE 201","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Tuesday"],"day_label":"Tuesday","start":"17:00","end":"18:00","tutor":"Morgan Chen","classes":["ENGR 101","ENGR 102","MATH 172","CHE 598"],"location":"ETLC — Table 1","active":true},
+
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"10:00","end":"11:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"10:00","end":"12:00","tutor":"Riley Patel","classes":["CHE 321","CHE 441","CHE 485","CHE 598","PHYS 201","MATH 172"],"location":"ETLC — Table 2","active":true},
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"12:00","end":"13:00","tutor":"Jordan Lee","classes":["CHE 201","CHE 321","CHE 441","ENGR 101","ENGR 102","MATH 171","MATH 172","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"14:00","end":"16:00","tutor":"Morgan Chen","classes":["CHE 101","CHE 201","CHE 485","CHE 598"],"location":"ETLC — Table 2","active":true},
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"15:00","end":"16:00","tutor":"Taylor Morgan","classes":["ENGR 101","ENGR 102","MATH 171","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Wednesday"],"day_label":"Wednesday","start":"16:00","end":"18:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","CHE 321","CHE 441","CHE 485","MATH 171","MATH 172","PHYS 201","ENGR 102"],"location":"ETLC — Table 2","active":true},
+
+    {"days":["Thursday"],"day_label":"Thursday","start":"10:00","end":"12:00","tutor":"Jordan Lee","classes":["CHE 321","CHE 441","CHE 485","CHE 598","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Thursday"],"day_label":"Thursday","start":"10:00","end":"11:00","tutor":"Morgan Chen","classes":["CHE 101","CHE 201","MATH 171"],"location":"ETLC — Table 2","active":true},
+    {"days":["Thursday"],"day_label":"Thursday","start":"12:00","end":"14:00","tutor":"Taylor Morgan","classes":["CHE 201","ENGR 101","ENGR 102","MATH 172","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Thursday"],"day_label":"Thursday","start":"13:00","end":"14:00","tutor":"Riley Patel","classes":["CHE 101","CHE 321","CHE 441","CHE 598","MATH 171","MATH 172"],"location":"ETLC — Table 2","active":true},
+    {"days":["Thursday"],"day_label":"Thursday","start":"15:00","end":"17:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","CHE 321","CHE 441","CHE 485","CHE 598","MATH 171","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Thursday"],"day_label":"Thursday","start":"16:00","end":"17:00","tutor":"Jordan Lee","classes":["CHE 485","CHE 598","ENGR 101","ENGR 102","MATH 172"],"location":"ETLC — Table 2","active":true},
+
+    {"days":["Friday"],"day_label":"Friday","start":"10:00","end":"11:00","tutor":"Riley Patel","classes":["CHE 101","CHE 201","CHE 321","MATH 171"],"location":"ETLC — Table 1","active":true},
+    {"days":["Friday"],"day_label":"Friday","start":"10:00","end":"12:00","tutor":"Taylor Morgan","classes":["CHE 441","CHE 485","CHE 598","ENGR 101","ENGR 102","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Friday"],"day_label":"Friday","start":"12:00","end":"14:00","tutor":"Morgan Chen","classes":["CHE 201","CHE 321","MATH 172","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Friday"],"day_label":"Friday","start":"13:00","end":"14:00","tutor":"Alex Johnson","classes":["CHE 101","CHE 201","CHE 441","CHE 485","MATH 171","MATH 172","PHYS 201"],"location":"ETLC — Table 2","active":true},
+    {"days":["Friday"],"day_label":"Friday","start":"15:00","end":"17:00","tutor":"Jordan Lee","classes":["CHE 321","CHE 441","CHE 485","CHE 598","ENGR 101","ENGR 102","PHYS 201"],"location":"ETLC — Table 1","active":true},
+    {"days":["Friday"],"day_label":"Friday","start":"15:00","end":"16:00","tutor":"Riley Patel","classes":["CHE 101","CHE 201","MATH 171","MATH 172"],"location":"ETLC — Table 2","active":true}
   ]
 }
