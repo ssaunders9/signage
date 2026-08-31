@@ -152,6 +152,7 @@ async function loadSchedule() {
     const response = await fetch(scheduleUrl, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const csv = await response.text();
+    if (!csv.trim()) throw new Error('The tutoring CSV is empty.');
     schedule = parseCsv(csv);
     $('collegeName').textContent = settings.college_name || $('collegeName').textContent;
     $('pageTitle').textContent = settings.page_title || $('pageTitle').textContent;
