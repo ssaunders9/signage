@@ -90,7 +90,7 @@ function render() {
   const currentlyAvailable = visible.some((item) => item.startMinutes <= current && item.endMinutes >= current);
   const upcoming = visible.filter((item) => item.startMinutes > current);
   const nowCards = visible.filter((item) => item.startMinutes <= current && item.endMinutes >= current);
-  const nowSeparator = '<div class="schedule-separator" role="separator"><span>Now</span></div>';
+  const nowSeparator = '<div class="schedule-separator now-separator" role="separator"><span>Now</span></div>';
   const unavailableCard = currentlyAvailable ? '' : `<article class="card unavailable status-card">
       <div class="session-header">
         <div class="time">No One Available</div>
