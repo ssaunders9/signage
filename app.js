@@ -92,7 +92,7 @@ function render() {
   const nowCards = visible.filter((item) => item.startMinutes <= current && item.endMinutes >= current);
   const nowSeparator = '<div class="schedule-separator" role="separator"><span>Now</span></div>';
   const unavailableCard = currentlyAvailable ? '' : `<article class="card unavailable status-card">
-      <div class="session-details">
+      <div class="session-header">
         <div class="time">No One Available</div>
         <div class="tutor">Please check the upcoming times.</div>
       </div>
@@ -103,7 +103,7 @@ function render() {
     const ongoing = item.startMinutes <= current && item.endMinutes >= current;
     const classes = item.classes.map((course) => `<span class="course">${course}</span>`).join('');
     return `<article class="card ${ongoing ? 'soon' : ''}">
-      <div class="session-details">
+      <div class="session-header">
         <div class="time">${formatTime(item.start)}–${formatTime(item.end)}</div>
         <div class="tutor">${item.tutor}</div>
       </div>

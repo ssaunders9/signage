@@ -50,16 +50,16 @@ h1 { font-size: clamp(48px, 5.5vw, 96px); line-height: 1; margin: 0; }
 .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(12px, 1.4vw, 24px); flex: 1; align-content: start; }
 .schedule-separator { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; color: #f0c75e; font-size: clamp(20px, 2vw, 34px); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .schedule-separator::before, .schedule-separator::after { content: ""; height: 2px; background: var(--gray); flex: 1; }
-.card { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr); gap: clamp(22px, 3vw, 48px); background: var(--gray-dark); border-left: 10px solid var(--green); border-radius: 2px; padding: clamp(24px, 2.8vw, 42px); min-height: 230px; }
+.card { display: block; background: var(--gray-dark); border-left: 10px solid var(--green); border-radius: 2px; padding: clamp(24px, 2.8vw, 42px); min-height: 230px; }
 .card.soon { border-left-color: var(--gold); }
 .card.unavailable { border-left-color: var(--crimson); }
 .card.status-card { grid-column: 1 / -1; }
 .card.unavailable .time { color: #f0c75e; }
-.session-details { border-right: 2px solid var(--gray); padding-right: clamp(22px, 3vw, 48px); }
+.session-header { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(18px, 3vw, 48px); padding-bottom: clamp(16px, 1.8vw, 28px); border-bottom: 2px solid var(--gray); }
 .card h2 { display: block; width: 100%; font-size: clamp(30px, 3vw, 52px); margin: 0 0 12px; }
 .card .time { color: #f0c75e; font-size: clamp(30px, 3vw, 50px); font-weight: 700; }
-.card .tutor { font-size: clamp(24px, 2.2vw, 38px); margin-top: 20px; }
-.card .classes { color: var(--white); font-size: clamp(26px, 2.5vw, 42px); margin-top: 18px; line-height: 1.25; }
+.card .tutor { font-size: clamp(24px, 2.2vw, 38px); text-align: left; }
+.card .classes { color: var(--white); font-size: clamp(26px, 2.5vw, 42px); margin-top: clamp(16px, 1.8vw, 28px); line-height: 1.25; }
 .classes-label { display: block; color: #f0c75e; font-size: .7em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
 .course-list { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
 .course { display: inline-block; background: var(--crimson); border: 1px solid #c85b6c; border-radius: 3px; padding: 8px 12px; color: var(--white); font-size: .82em; font-weight: 700; line-height: 1; white-space: nowrap; }
@@ -68,8 +68,8 @@ footer { color: #d5dadd; font-size: clamp(18px, 1.6vw, 28px); margin-top: auto; 
 .warning { color: #f0c75e; font-weight: 700; }
 @media (max-width: 700px) {
   .masthead { align-items: flex-start; }
-  .card { grid-template-columns: 1fr; min-height: 160px; }
-  .session-details { border-right: 0; border-bottom: 2px solid var(--gray); padding: 0 0 16px; }
+  .card { min-height: 160px; }
+  .session-header { grid-template-columns: 1fr 1fr; gap: 14px; }
 }
 
 /* Dense treatment for a 960 x 1080 half-screen signage region. */
@@ -79,8 +79,8 @@ footer { color: #d5dadd; font-size: clamp(18px, 1.6vw, 28px); margin-top: auto; 
   .eyebrow { margin-bottom: 8px; }
   .status-bar { padding: 12px 0; }
   .schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .card { grid-template-columns: minmax(145px, .72fr) minmax(0, 1.28fr); gap: 20px; padding: 22px; min-height: 0; }
-  .session-details { padding-right: 20px; }
+  .card { padding: 22px; min-height: 0; }
+  .session-header { gap: 20px; }
   .card h2 { font-size: clamp(26px, 2.8vw, 38px); margin-bottom: 8px; }
   .card .time { font-size: clamp(25px, 2.6vw, 36px); }
   .card .tutor { font-size: clamp(21px, 2.2vw, 30px); margin-top: 14px; }
