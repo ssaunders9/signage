@@ -94,7 +94,7 @@ function render() {
   const unavailableCard = currentlyAvailable ? '' : `<article class="card unavailable status-card">
       <div class="session-header">
         <div class="time">No One Available</div>
-        <div class="tutor">Please check the upcoming times.</div>
+        <div class="tutor"></div>
       </div>
       <div class="classes"><span class="classes-label">Availability</span><span class="course-list">Tutoring resumes at the next scheduled time.</span></div>
     </article>`;
@@ -113,9 +113,9 @@ function render() {
 
   const upcomingSeparator = upcoming.length ? '<div class="schedule-separator" role="separator"><span>Upcoming</span></div>' : '';
   $('schedule').innerHTML = visible.length ? nowSeparator + unavailableCard + nowCards.map(renderCard).join('') + upcomingSeparator + upcoming.map(renderCard).join('') : nowSeparator + `<article class="card unavailable status-card">
-      <div class="session-details">
+      <div class="session-header">
         <div class="time">No One Available</div>
-        <div class="tutor">There are no upcoming tutoring hours in this display window.</div>
+        <div class="tutor"></div>
       </div>
       <div class="classes"><span class="classes-label">Availability</span><span class="course-list">Please check back later.</span></div>
     </article>`;
