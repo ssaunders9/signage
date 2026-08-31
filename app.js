@@ -88,6 +88,8 @@ function render() {
     .sort((a, b) => a.startMinutes - b.startMinutes);
 
   const currentlyAvailable = visible.some((item) => item.startMinutes <= current && item.endMinutes >= current);
+  const upcoming = visible.filter((item) => item.startMinutes > current);
+  const nowCards = visible.filter((item) => item.startMinutes <= current && item.endMinutes >= current);
   const unavailableCard = currentlyAvailable ? '' : `<article class="card unavailable">
       <div class="session-details">
         <h2>Now</h2>
@@ -97,7 +99,7 @@ function render() {
       <div class="classes"><span class="classes-label">Upcoming tutors</span><span class="course-list">See the scheduled times below.</span></div>
     </article>`;
 
-  $('schedule').innerHTML = visible.length ? unavailableCard + visible.map((item) => {
+  const renderCard = (item) => {
     const ongoing = item.startMinutes <= current && item.endMinutes >= current;
     const classes = item.classes.map((course) => `<span class="course">${course}</span>`).join('');
     return `<article class="card ${ongoing ? 'soon' : ''}">
@@ -108,7 +110,10 @@ function render() {
       </div>
       <div class="classes"><span class="classes-label">Courses</span><span class="course-list">${classes}</span></div>
     </article>`;
-  }).join('') : `<article class="card unavailable">
+  };
+
+  const separator = nowCards.length && upcoming.length ? '<div class="schedule-separator" role="separator"><span>Upcoming</span></div>' : '';
+  $('schedule').innerHTML = visible.length ? unavailableCard + nowCards.map(renderCard).join('') + separator + upcoming.map(renderCard).join('') : `<article class="card unavailable">
       <div class="session-details">
         <h2>Now</h2>
         <div class="time">No One Available</div>

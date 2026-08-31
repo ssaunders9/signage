@@ -48,6 +48,8 @@ h1 { font-size: clamp(48px, 5.5vw, 96px); line-height: 1; margin: 0; }
 .test-controls button.secondary { background: var(--gray-dark); }
 .status-bar { border-top: 2px solid var(--gray); border-bottom: 2px solid var(--gray); color: #d5dadd; font-size: clamp(15px, 1.4vw, 24px); padding: 12px 0; }
 .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(12px, 1.4vw, 24px); flex: 1; align-content: start; }
+.schedule-separator { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; color: #f0c75e; font-size: clamp(20px, 2vw, 34px); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.schedule-separator::before, .schedule-separator::after { content: ""; height: 2px; background: var(--gray); flex: 1; }
 .card { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr); gap: clamp(22px, 3vw, 48px); background: var(--gray-dark); border-left: 10px solid var(--green); border-radius: 2px; padding: clamp(24px, 2.8vw, 42px); min-height: 230px; }
 .card.soon { border-left-color: var(--gold); }
 .card.unavailable { border-left-color: var(--crimson); }
