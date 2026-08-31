@@ -8,7 +8,8 @@
   },
   "schedule": [
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "08:00",
       "end": "10:00",
       "tutor": "Alex Johnson",
@@ -17,7 +18,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "08:00",
       "end": "10:00",
       "tutor": "Jordan Lee",
@@ -26,7 +28,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "10:00",
       "end": "11:00",
       "tutor": "Alex Johnson",
@@ -35,7 +38,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "10:00",
       "end": "11:00",
       "tutor": "Jordan Lee",
@@ -44,7 +48,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "11:00",
       "end": "13:00",
       "tutor": "Taylor Morgan",
@@ -53,7 +58,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "11:00",
       "end": "13:00",
       "tutor": "Morgan Chen",
@@ -62,7 +68,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "13:00",
       "end": "15:00",
       "tutor": "Alex Johnson",
@@ -71,7 +78,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "13:00",
       "end": "15:00",
       "tutor": "Jordan Lee",
@@ -80,7 +88,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "15:00",
       "end": "16:00",
       "tutor": "Taylor Morgan",
@@ -89,7 +98,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "15:00",
       "end": "16:00",
       "tutor": "Morgan Chen",
@@ -98,7 +108,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "16:00",
       "end": "18:00",
       "tutor": "Alex Johnson",
@@ -107,7 +118,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "16:00",
       "end": "18:00",
       "tutor": "Jordan Lee",
@@ -116,7 +128,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "18:00",
       "end": "19:00",
       "tutor": "Taylor Morgan",
@@ -125,7 +138,8 @@
       "active": true
     },
     {
-      "day_label": "Mon–Fri",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "day_label": "Weekdays",
       "start": "18:00",
       "end": "19:00",
       "tutor": "Morgan Chen",
@@ -134,7 +148,8 @@
       "active": true
     },
     {
-      "day_label": "Every day",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "day_label": "Mon–Sat",
       "start": "19:00",
       "end": "20:00",
       "tutor": "Alex Johnson",
@@ -143,7 +158,8 @@
       "active": true
     },
     {
-      "day_label": "Every day",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "day_label": "Mon–Sat",
       "start": "19:00",
       "end": "20:00",
       "tutor": "Jordan Lee",

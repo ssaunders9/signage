@@ -21,6 +21,13 @@ function getDisplayDate() {
   return testDateTime || new Date();
 }
 
+function isScheduledForDate(item, date) {
+  if (Array.isArray(item.days) && item.days.length) {
+    return item.days.includes(date.toLocaleDateString('en-US', { weekday: 'long' }));
+  }
+  return true;
+}
+
 function formatTime(value) {
   const [hours, minutes] = value.split(':').map(Number);
   const date = new Date();
@@ -37,9 +44,11 @@ function renderClock() {
 function render() {
   renderClock();
   const current = minutesNow();
+  const displayDate = getDisplayDate();
   const windowMinutes = Number(settings.display_window_hours || 6) * 60;
   const visible = schedule
-    .filter((item) => item.active !== false)
+    .filter((item) => item.active !== false && item.start && item.end && Array.isArray(item.classes))
+    .filter((item) => isScheduledForDate(item, displayDate))
     .map((item) => ({ ...item, startMinutes: parseTime(item.start), endMinutes: parseTime(item.end) }))
     .filter((item) => item.endMinutes >= current && item.startMinutes <= current + windowMinutes)
     .sort((a, b) => a.startMinutes - b.startMinutes);
@@ -55,7 +64,7 @@ function render() {
       </div>
       <div class="classes"><span class="classes-label">Courses</span><span class="course-list">${classes}</span></div>
     </article>`;
-  }).join('') : '<div class="empty">No tutoring scheduled during this display window.</div>';
+  }).join('') : '<div class="empty">No one is available during this display window.</div>';
 }
 
 function toDateTimeLocalValue(date) {
@@ -67,7 +76,8 @@ function setupTestControls() {
   const input = $('testDateTime');
   input.value = toDateTimeLocalValue(new Date());
   $('applyTestTime').addEventListener('click', () => {
-    testDateTime = input.value ? new Date(input.value) : null;
+    const selectedDate = input.value ? new Date(input.value) : null;
+    testDateTime = selectedDate && !Number.isNaN(selectedDate.getTime()) ? selectedDate : null;
     render();
   });
   $('useLiveTime').addEventListener('click', () => {
