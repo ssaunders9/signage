@@ -164,7 +164,8 @@ async function loadSchedule() {
 }
 
 renderClock();
-setupTestControls();
+// Testing controls are disabled in the production display markup.
+// setupTestControls();
 loadSchedule();
 setInterval(render, 30 * 1000);
 setInterval(loadSchedule, REFRESH_MS);
