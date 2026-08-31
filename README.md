@@ -4,15 +4,14 @@ A lightweight, internally hosted webpage for an Xibo digital signage display. It
 
 ## Update the schedule
 
-Staff only need to edit [`data/tutoring_hours.json`](data/tutoring_hours.json):
+Staff only need to edit [`data/tutoring_hours.csv`](data/tutoring_hours.csv):
 
-- `updated_at`: change this whenever the schedule is edited, using an ISO date/time.
-- `settings.display_window_hours`: number of upcoming hours shown (6 is a good starting point).
-- `schedule`: add, remove, or update tutoring blocks.
-- `classes`: a list of course codes; it can contain up to 10 or more courses.
-- `active`: set to `false` to temporarily hide a tutoring block without deleting it.
+- `Day`: weekday name, such as `Monday`.
+- `Start` and `End`: times such as `10:00 AM` and `1:00 PM`.
+- `Courses`: semicolon-separated course codes; use 3–10 courses as needed.
+- `Active`: use `Yes` or `No` to show or hide a row.
 
-Each schedule item uses 24-hour times such as `09:00` and `13:30`. The display automatically reloads the JSON every five minutes and refreshes its clock every 30 seconds.
+The display automatically reloads the CSV every five minutes and refreshes its clock every 30 seconds.
 
 ## Run locally
 
@@ -33,4 +32,4 @@ Open `http://localhost:8000` in a browser. For internal hosting, place this fold
 4. Disable browser zoom and use the display's native resolution.
 5. Keep the page's automatic refresh enabled so schedule changes appear without manually restarting the layout.
 
-The current layout uses high contrast, large type, a rolling six-hour window, and cards that highlight tutoring happening now. If staff find the class list too dense, reduce the display window or shorten course labels in the data file.
+The current layout uses high contrast, large type, a rolling six-hour window, and cards that highlight tutoring happening now. If staff find the class list too dense, shorten course labels in the CSV.

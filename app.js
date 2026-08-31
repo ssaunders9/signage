@@ -1,4 +1,4 @@
-const DATA_URL = 'data/tutoring_hours.json';
+const DATA_URL = 'data/tutoring_hours.csv';
 const REFRESH_MS = 5 * 60 * 1000;
 
 let settings = {};
@@ -8,8 +8,11 @@ let testDateTime = null;
 const $ = (id) => document.getElementById(id);
 
 function parseTime(value) {
-  const [hours, minutes] = value.split(':').map(Number);
-  return hours * 60 + minutes;
+  const match = value.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+  if (!match) throw new Error(`Invalid time: ${value}`);
+  let hours = Number(match[1]) % 12;
+  if (match[3].toUpperCase() === 'PM') hours += 12;
+  return hours * 60 + Number(match[2]);
 }
 
 function minutesNow() {
@@ -29,10 +32,41 @@ function isScheduledForDate(item, date) {
 }
 
 function formatTime(value) {
-  const [hours, minutes] = value.split(':').map(Number);
+  const minutes = parseTime(value);
   const date = new Date();
-  date.setHours(hours, minutes, 0, 0);
+  date.setHours(Math.floor(minutes / 60), minutes % 60, 0, 0);
   return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+}
+
+function parseCsvLine(line) {
+  const values = [];
+  let value = '';
+  let quoted = false;
+  for (const character of line) {
+    if (character === '"') quoted = !quoted;
+    else if (character === ',' && !quoted) { values.push(value.trim()); value = ''; }
+    else value += character;
+  }
+  values.push(value.trim());
+  return values;
+}
+
+function parseCsv(text) {
+  const lines = text.split(/\r?\n/).filter((line) => line.trim());
+  const headers = parseCsvLine(lines.shift()).map((header) => header.toLowerCase());
+  return lines.map((line) => {
+    const values = parseCsvLine(line);
+    const item = Object.fromEntries(headers.map((header, index) => [header, values[index] || '']));
+    return {
+      days: [item.day],
+      day_label: item.day,
+      start: item.start,
+      end: item.end,
+      tutor: item.tutor,
+      classes: item.courses.split(';').map((course) => course.trim()).filter(Boolean),
+      active: !['no', 'false', '0'].includes(item.active.toLowerCase())
+    };
+  });
 }
 
 function renderClock() {
@@ -107,22 +141,21 @@ function setupTestControls() {
 async function loadSchedule() {
   try {
     // Use a changing query string plus cache directives so Xibo/browser proxies
-    // do not reuse an older copy of the schedule JSON.
+    // Do not reuse an older copy of the schedule CSV.
     const scheduleUrl = `${DATA_URL}?v=${Date.now()}`;
     // Keep the request simple for Xibo's embedded Chromium/web-proxy setup.
     // The changing query string handles caches without custom headers or CORS
     // preflight requests.
     const response = await fetch(scheduleUrl, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    settings = data.settings || {};
-    schedule = data.schedule || [];
+    const csv = await response.text();
+    schedule = parseCsv(csv);
     $('collegeName').textContent = settings.college_name || $('collegeName').textContent;
     $('pageTitle').textContent = settings.page_title || $('pageTitle').textContent;
-    $('staleWarning').hidden = data.updated_at ? (Date.now() - new Date(data.updated_at).getTime()) < 7 * 86400000 : true;
+    $('staleWarning').hidden = true;
     render();
   } catch (error) {
-    $('schedule').innerHTML = '<div class="empty">Schedule unavailable. Check that the site is being served over HTTP and that data/tutoring_hours.json is present.</div>';
+    $('schedule').innerHTML = '<div class="empty">Schedule unavailable. Check that the site is being served over HTTP and that data/tutoring_hours.csv is present.</div>';
     console.error(error);
   }
 }
