@@ -58,7 +58,7 @@ h1 { font-size: clamp(48px, 5.5vw, 96px); line-height: 1; margin: 0; }
 .session-header { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); align-items: center; gap: clamp(18px, 3vw, 48px); padding-bottom: clamp(16px, 1.8vw, 28px); border-bottom: 2px solid var(--gray); }
 .card h2 { display: block; width: 100%; font-size: clamp(30px, 3vw, 52px); margin: 0 0 12px; }
 .card .time { color: #f0c75e; font-size: clamp(30px, 3vw, 50px); font-weight: 700; }
-.card .tutor { font-size: clamp(24px, 2.2vw, 38px); text-align: right; white-space: nowrap; }
+.card .tutor { color: var(--white); font-size: clamp(30px, 3vw, 50px); font-weight: 700; text-align: right; white-space: nowrap; }
 .card .classes { color: var(--white); font-size: clamp(26px, 2.5vw, 42px); margin-top: clamp(24px, 2.6vw, 38px); line-height: 1.25; }
 .classes-label { display: block; color: #f0c75e; font-size: .7em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
 .course-list { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
@@ -83,7 +83,7 @@ footer { color: #d5dadd; font-size: clamp(18px, 1.6vw, 28px); margin-top: auto; 
   .session-header { grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: 20px; }
   .card h2 { font-size: clamp(26px, 2.8vw, 38px); margin-bottom: 8px; }
   .card .time { font-size: clamp(25px, 2.6vw, 36px); }
-  .card .tutor { font-size: clamp(21px, 2.2vw, 30px); margin-top: 14px; }
+  .card .tutor { font-size: clamp(25px, 2.6vw, 36px); font-weight: 700; }
   .card .classes { font-size: clamp(22px, 2.3vw, 32px); margin-top: 0; }
   .classes-label { margin-bottom: 7px; }
   .course-list { gap: 7px; }
