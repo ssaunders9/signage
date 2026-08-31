@@ -3,6 +3,7 @@ const REFRESH_MS = 5 * 60 * 1000;
 
 let settings = {};
 let schedule = [];
+let testDateTime = null;
 
 const $ = (id) => document.getElementById(id);
 
@@ -12,8 +13,12 @@ function parseTime(value) {
 }
 
 function minutesNow() {
-  const now = new Date();
+  const now = getDisplayDate();
   return now.getHours() * 60 + now.getMinutes();
+}
+
+function getDisplayDate() {
+  return testDateTime || new Date();
 }
 
 function formatTime(value) {
@@ -24,7 +29,7 @@ function formatTime(value) {
 }
 
 function renderClock() {
-  const now = new Date();
+  const now = getDisplayDate();
   $('currentTime').textContent = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   $('currentDate').textContent = now.toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' });
 }
@@ -53,6 +58,25 @@ function render() {
   }).join('') : '<div class="empty">No tutoring scheduled during this display window.</div>';
 }
 
+function toDateTimeLocalValue(date) {
+  const offset = date.getTimezoneOffset();
+  return new Date(date.getTime() - offset * 60000).toISOString().slice(0, 16);
+}
+
+function setupTestControls() {
+  const input = $('testDateTime');
+  input.value = toDateTimeLocalValue(new Date());
+  $('applyTestTime').addEventListener('click', () => {
+    testDateTime = input.value ? new Date(input.value) : null;
+    render();
+  });
+  $('useLiveTime').addEventListener('click', () => {
+    testDateTime = null;
+    input.value = toDateTimeLocalValue(new Date());
+    render();
+  });
+}
+
 async function loadSchedule() {
   try {
     // Use a changing query string plus cache directives so Xibo/browser proxies
@@ -77,6 +101,7 @@ async function loadSchedule() {
 }
 
 renderClock();
+setupTestControls();
 loadSchedule();
 setInterval(render, 30 * 1000);
 setInterval(loadSchedule, REFRESH_MS);

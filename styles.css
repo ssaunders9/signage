@@ -39,6 +39,13 @@ h1 { font-size: clamp(36px, 4.3vw, 76px); line-height: 1; margin: 0; }
 .clock { text-align: right; white-space: nowrap; }
 .clock time { display: block; font-size: clamp(34px, 4vw, 68px); font-weight: 700; }
 .clock span { color: #d5dadd; font-size: clamp(14px, 1.3vw, 22px); }
+.test-controls { color: #d5dadd; font-size: 16px; }
+.test-controls summary { cursor: pointer; color: #f0c75e; font-weight: 700; }
+.test-controls-form { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 10px; }
+.test-controls label { font-weight: 700; }
+.test-controls input, .test-controls button { border: 1px solid var(--gray); border-radius: 3px; padding: 8px 12px; font: inherit; }
+.test-controls button { background: var(--crimson); color: var(--white); cursor: pointer; font-weight: 700; }
+.test-controls button.secondary { background: var(--gray-dark); }
 .status-bar { border-top: 2px solid var(--gray); border-bottom: 2px solid var(--gray); color: #d5dadd; font-size: clamp(15px, 1.4vw, 24px); padding: 12px 0; }
 .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(12px, 1.4vw, 24px); flex: 1; align-content: start; }
 .card { display: grid; grid-template-columns: minmax(190px, 1fr) minmax(0, 2fr); gap: clamp(18px, 2.5vw, 40px); background: var(--gray-dark); border-left: 8px solid var(--green); border-radius: 2px; padding: clamp(18px, 2vw, 32px); min-height: 190px; }
