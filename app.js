@@ -90,9 +90,9 @@ function render() {
   const currentlyAvailable = visible.some((item) => item.startMinutes <= current && item.endMinutes >= current);
   const upcoming = visible.filter((item) => item.startMinutes > current);
   const nowCards = visible.filter((item) => item.startMinutes <= current && item.endMinutes >= current);
+  const nowSeparator = '<div class="schedule-separator" role="separator"><span>Now</span></div>';
   const unavailableCard = currentlyAvailable ? '' : `<article class="card unavailable status-card">
       <div class="session-details">
-        <h2>Now</h2>
         <div class="time">No One Available</div>
         <div class="tutor">Please check the upcoming times.</div>
       </div>
@@ -104,7 +104,6 @@ function render() {
     const classes = item.classes.map((course) => `<span class="course">${course}</span>`).join('');
     return `<article class="card ${ongoing ? 'soon' : ''}">
       <div class="session-details">
-        <h2>${ongoing ? 'Now' : 'Upcoming'}</h2>
         <div class="time">${formatTime(item.start)}–${formatTime(item.end)}</div>
         <div class="tutor">${item.tutor}</div>
       </div>
@@ -112,10 +111,9 @@ function render() {
     </article>`;
   };
 
-  const separator = upcoming.length && (nowCards.length || !currentlyAvailable) ? '<div class="schedule-separator" role="separator"><span>Upcoming</span></div>' : '';
-  $('schedule').innerHTML = visible.length ? unavailableCard + nowCards.map(renderCard).join('') + separator + upcoming.map(renderCard).join('') : `<article class="card unavailable status-card">
+  const upcomingSeparator = upcoming.length ? '<div class="schedule-separator" role="separator"><span>Upcoming</span></div>' : '';
+  $('schedule').innerHTML = visible.length ? nowSeparator + unavailableCard + nowCards.map(renderCard).join('') + upcomingSeparator + upcoming.map(renderCard).join('') : nowSeparator + `<article class="card unavailable status-card">
       <div class="session-details">
-        <h2>Now</h2>
         <div class="time">No One Available</div>
         <div class="tutor">There are no upcoming tutoring hours in this display window.</div>
       </div>
