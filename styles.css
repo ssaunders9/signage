@@ -1,14 +1,11 @@
 :root {
   color-scheme: dark;
-  /* WSU brand palette: crimson, gray, white, and black. */
+  /* WSU brand palette: Crimson (#981E32), Gray (#5E6A71), White, and Black. */
   --crimson: #981e32;
-  --crimson-dark: #6f1726;
-  --black: #1f1f1f;
+  --black: #000000;
   --gray: #5e6a71;
-  --gray-dark: #353b3f;
+  --gray-dark: #3b3b3b;
   --white: #ffffff;
-  --gold: #c69214;
-  --green: #73a57a;
 }
 
 * { box-sizing: border-box; }
@@ -34,13 +31,13 @@ body {
   background: var(--crimson);
 }
 .masthead, .status-bar, footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-.eyebrow { color: #e6a6b0; font-size: clamp(18px, 1.8vw, 32px); font-weight: 700; margin: 0 0 10px; letter-spacing: .04em; }
+.eyebrow { color: var(--white); font-size: clamp(18px, 1.8vw, 32px); font-weight: 700; margin: 0 0 10px; letter-spacing: .04em; }
 h1 { font-size: clamp(48px, 5.5vw, 96px); line-height: 1; margin: 0; }
 .clock { text-align: right; white-space: nowrap; }
 .clock time { display: block; font-size: clamp(48px, 5vw, 88px); font-weight: 700; }
 .clock span { color: #d5dadd; font-size: clamp(18px, 1.7vw, 30px); }
 .test-controls { color: #d5dadd; font-size: 16px; }
-.test-controls summary { cursor: pointer; color: #f0c75e; font-weight: 700; }
+.test-controls summary { cursor: pointer; color: var(--white); font-weight: 700; }
 .test-controls-form { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 10px; }
 .test-controls label { font-weight: 700; }
 .test-controls input, .test-controls button { border: 1px solid var(--gray); border-radius: 3px; padding: 8px 12px; font: inherit; }
@@ -48,24 +45,24 @@ h1 { font-size: clamp(48px, 5.5vw, 96px); line-height: 1; margin: 0; }
 .test-controls button.secondary { background: var(--gray-dark); }
 .status-bar { border-top: 2px solid var(--gray); border-bottom: 2px solid var(--gray); color: #d5dadd; font-size: clamp(15px, 1.4vw, 24px); padding: 12px 0; }
 .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(12px, 1.4vw, 24px); flex: 1; align-content: start; }
-.schedule-separator { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; color: #f0c75e; font-size: clamp(20px, 2vw, 34px); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.schedule-separator { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; color: var(--white); font-size: clamp(20px, 2vw, 34px); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .schedule-separator::before, .schedule-separator::after { content: ""; height: 2px; background: var(--gray); flex: 1; }
-.card { display: block; background: var(--gray-dark); border-left: 10px solid var(--green); border-radius: 2px; padding: clamp(24px, 2.8vw, 42px); min-height: 230px; }
-.card.soon { border-left-color: var(--gold); }
+.card { display: block; background: var(--gray-dark); border-left: 10px solid var(--gray); border-radius: 2px; padding: clamp(24px, 2.8vw, 42px); min-height: 230px; }
+.card.soon { border-left-color: var(--crimson); }
 .card.unavailable { border-left-color: var(--crimson); }
 .card.status-card { grid-column: 1 / -1; }
-.card.unavailable .time { color: #f0c75e; }
+.card.unavailable .time { color: var(--white); }
 .session-header { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); align-items: center; gap: clamp(18px, 3vw, 48px); padding-bottom: clamp(16px, 1.8vw, 28px); border-bottom: 2px solid var(--gray); }
 .card h2 { display: block; width: 100%; font-size: clamp(30px, 3vw, 52px); margin: 0 0 12px; }
-.card .time { color: #f0c75e; font-size: clamp(30px, 3vw, 50px); font-weight: 700; }
+.card .time { color: var(--white); font-size: clamp(30px, 3vw, 50px); font-weight: 700; }
 .card .tutor { color: var(--white); font-size: clamp(30px, 3vw, 50px); font-weight: 700; text-align: right; white-space: nowrap; }
 .card .classes { color: var(--white); font-size: clamp(26px, 2.5vw, 42px); margin-top: clamp(24px, 2.6vw, 38px); line-height: 1.25; }
-.classes-label { display: block; color: #f0c75e; font-size: .7em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.classes-label { display: block; color: var(--white); font-size: .7em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
 .course-list { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
-.course { display: inline-block; background: var(--crimson); border: 1px solid #c85b6c; border-radius: 3px; padding: 8px 12px; color: var(--white); font-size: .82em; font-weight: 700; line-height: 1; white-space: nowrap; }
+.course { display: inline-block; background: var(--crimson); border: 1px solid var(--crimson); border-radius: 3px; padding: 8px 12px; color: var(--white); font-size: .82em; font-weight: 700; line-height: 1; white-space: nowrap; }
 .loading, .empty { color: #d5dadd; font-size: clamp(22px, 2vw, 34px); padding: 36px 0; }
 footer { color: #d5dadd; font-size: clamp(18px, 1.6vw, 28px); margin-top: auto; }
-.warning { color: #f0c75e; font-weight: 700; }
+.warning { color: var(--white); font-weight: 700; }
 @media (max-width: 700px) {
   .masthead { align-items: flex-start; }
   .card { min-height: 160px; }
